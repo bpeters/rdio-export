@@ -1,9 +1,11 @@
 var express = require('express');
 var app = express();
 
+var config = require('config');
+
 var rdioConfig = {
-  clientId: '6gi5vuqh2jamheu5xds4uypfqy',
-  clientSecret: '0T7mJSTeHnBqq4IlmPcznw'
+  clientId: process.env.RDIO_ID || config.get('Rdio').clientId,
+  clientSecret: process.env.RDIO_SECRET || config.get('Rdio').clientSecret,
 }
 
 var Rdio = require('rdio')({

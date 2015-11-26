@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "config": "^1.17.1",
     "express": "^4.13.3",
     "rdio": "^3.1.0"
   }
